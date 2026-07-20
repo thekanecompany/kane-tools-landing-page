@@ -52,10 +52,10 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       width: 100%;
-      max-width: 560px;
+      max-width: 840px;
     }
     .tool {
       display: flex;
@@ -96,7 +96,7 @@
       color: var(--muted);
       font-size: 0.8rem;
     }
-    @media (max-width: 480px) {
+    @media (max-width: 720px) {
       .grid { grid-template-columns: 1fr; max-width: 340px; }
       .tool { min-height: 96px; padding: 24px 16px; }
       h1 { font-size: 1.6rem; }
@@ -120,11 +120,6 @@
       Zoning Watcher
       <span class="sub">Seacoast zoning &amp; planning monitor</span>
     </a>
-    <div class="tool soon">
-      <span class="icon">&#128295;</span>
-      Coming Soon
-      <span class="sub">In development</span>
-    </div>
     <div class="tool soon">
       <span class="icon">&#128295;</span>
       Coming Soon
