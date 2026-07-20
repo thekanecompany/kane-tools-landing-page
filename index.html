@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kane Tools</title>
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --card: #ffffff;
+      --text: #1a1d21;
+      --muted: #6b7280;
+      --accent: #1f4e79;
+      --accent-hover: #163a5c;
+      --border: #e2e5ea;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14161a;
+        --card: #1e2128;
+        --text: #e8eaed;
+        --muted: #9aa0a8;
+        --accent: #4a7fb5;
+        --accent-hover: #5d92c8;
+        --border: #2c3038;
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    header { text-align: center; margin-bottom: 40px; }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 560px;
+    }
+    .tool {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 32px 20px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: center;
+      transition: transform 0.12s ease, border-color 0.12s ease;
+      min-height: 120px;
+    }
+    a.tool:hover, a.tool:focus-visible {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+    a.tool:active { transform: translateY(0); }
+    .tool .icon { font-size: 1.6rem; }
+    .tool .sub {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--muted);
+    }
+    .tool.soon {
+      opacity: 0.55;
+      cursor: default;
+    }
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; max-width: 340px; }
+      .tool { min-height: 96px; padding: 24px 16px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kane Tools</h1>
+    <p>Internal tools built by The Kane Company</p>
+  </header>
+
+  <main class="grid">
+    <a class="tool" href="https://kane-intelligence-brief.vercel.app" target="_blank" rel="noopener">
+      <span class="icon">&#128240;</span>
+      Kane Intelligence Brief
+      <span class="sub">Daily news &amp; market brief</span>
+    </a>
+    <a class="tool" href="https://github.com/thekanecompany/zoning-watcher" target="_blank" rel="noopener">
+      <span class="icon">&#127961;&#65039;</span>
+      Zoning Watcher
+      <span class="sub">Seacoast zoning &amp; planning monitor</span>
+    </a>
+    <div class="tool soon">
+      <span class="icon">&#128295;</span>
+      Coming Soon
+      <span class="sub">In development</span>
+    </div>
+    <div class="tool soon">
+      <span class="icon">&#128295;</span>
+      Coming Soon
+      <span class="sub">In development</span>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 The Kane Company</footer>
+</body>
+</html>
